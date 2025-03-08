@@ -8,12 +8,6 @@ const doctorSchema = new Schema(
       trim: true,
       lowercase: true,
     },
-    email: {
-      type: String,
-      required: [true, "Email is required!!"],
-      lowercase: true,
-      trim: true
-    },
     phone: {
       type: Number,
       required: [true, "Phone number is required!!"],
