@@ -8,6 +8,9 @@ app.use(cookieParser());
 
 
 // Import Routes
+const patientRoute = require("./routes/patient.routes.js");
 
+
+app.use("/api/v1/patient", patientRoute);
 
 module.exports = { app }
