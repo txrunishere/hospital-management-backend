@@ -21,7 +21,7 @@ const createDoctor = asyncHandler(async (req, res) => {
   }
 
   const doesDoctorExists = await Doctor.findOne({ phone })
-  if (doesDoctorExists) { throw new ApiError(400, "Phone Number registered!!") }
+  if (doesDoctorExists) { throw new ApiError(409, "Phone Number registered!!") }
 
   logger.info(`New request for Register Doctor ${name}`);
 
