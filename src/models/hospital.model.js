@@ -17,7 +17,7 @@ const hospitalSchema = new Schema(
       required: [true, "City is required!!"],
       trim: true
     },
-    number: {
+    phone: {
       type: Number,
       required: [true, "Contact number is required!!"]
     },
