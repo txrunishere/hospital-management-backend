@@ -53,7 +53,7 @@ const createPatientProfile = asyncHandler(async (req, res) => {
     .json(
       new ApiResponse(
         201,
-        user,
+        { user },
         "Patient created successfully!!"
       )
     )

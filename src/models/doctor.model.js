@@ -20,6 +20,10 @@ const doctorSchema = new Schema(
     qualification: {
       type: String,
       required: true
+    },
+    workingIn: {
+      type: Schema.Types.ObjectId,
+      ref: "Hospital"
     }
   },
   { timestamps: true }
