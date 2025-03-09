@@ -29,8 +29,10 @@ app.use(
 
 // Import Routes
 const patientRoute = require("./routes/patient.routes.js");
+const doctorRoute = require("./routes/doctor.routes.js");
 
 
 app.use("/api/v1/patient", patientRoute);
+app.use("/api/v1/doctor", doctorRoute);
 
 module.exports = { app }
