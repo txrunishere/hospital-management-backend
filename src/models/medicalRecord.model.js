@@ -6,7 +6,7 @@ const medicalRecordSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Patient"
     },
-    disorder: {
+    diagnosis: {
       type: String,
       required: true,
       trim: true

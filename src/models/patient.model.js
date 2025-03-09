@@ -6,12 +6,13 @@ const patientSchema = new Schema(
       type: String,
       required: [true, "Name is required!!"],
       trim: true,
-      lowercase: true,
+      lowercase: true
     },
     phone: {
       type: Number,
       required: [true, "Phone number is required!!"],
-      trim: true
+      trim: true,
+      unique: true,
     },
     address: {
       type: String,
@@ -32,10 +33,18 @@ const patientSchema = new Schema(
       enum: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
       required: [true, "Blood group is required!!"]
     },
-    treatedBy: {
-      type: Schema.Types.ObjectId,
-      ref: "Doctor"
-    },
+    treatedBy: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Doctor"
+      }
+    ],
+    visitHospitals: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Hospital"
+      }
+    ],
     admittedIn: {
       type: Schema.Types.ObjectId,
       ref: "Hospital"

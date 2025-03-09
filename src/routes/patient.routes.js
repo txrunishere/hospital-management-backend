@@ -1,9 +1,14 @@
 const { Router } = require('express');
+
 const {
-  homePage
+  homePage,
+  createPatientProfile
 } = require("../controllers/patient.controller.js");
 const router = Router();
 
-router.route("/home").get(homePage);
+router.route("/").get(homePage);
+router.route("/create-patient").post(
+  createPatientProfile
+)
 
 module.exports = router;
